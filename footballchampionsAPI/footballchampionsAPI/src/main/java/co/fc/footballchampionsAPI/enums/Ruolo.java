@@ -1,0 +1,12 @@
+package co.fc.footballchampionsAPI.enums;
+
+public enum Ruolo {
+    PORTIERE,
+    DIFENSORE,
+    CENTROCAMPISTA,
+    ATTACCANTE,
+    DIFENSORE_CENTROCAMPISTA,
+    CENTROCAMPISTA_ATTACCANTE,
+    DIFENSORE_ATTACCANTE
+
+}
