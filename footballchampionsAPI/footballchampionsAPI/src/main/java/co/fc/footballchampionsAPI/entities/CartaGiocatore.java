@@ -26,7 +26,7 @@ public class CartaGiocatore {
     private String squadra;
     private String annata;
     private Abilita[] abilita = new Abilita[2];
-    private File fotoCarta;
+    private byte[] fotoCarta;
 
     @ManyToOne
     private Deck deck;
@@ -42,7 +42,7 @@ public class CartaGiocatore {
     public CartaGiocatore() {
     }
 
-    public CartaGiocatore(Long id, String nomeGiocatore, String cognomeGiocatore, Ruolo ruolo, int rapidita, int tackle, int tiro, int classe, int colpoDiTesta, int punteggioCarta, String squadra, String annata, Abilita[] abilita, File fotoCarta, Deck deck) {
+    public CartaGiocatore(Long id, String nomeGiocatore, String cognomeGiocatore, Ruolo ruolo, int rapidita, int tackle, int tiro, int classe, int colpoDiTesta, int punteggioCarta, String squadra, String annata, Abilita[] abilita, byte[] fotoCarta, Deck deck) {
         this.id = id;
         this.nomeGiocatore = nomeGiocatore;
         this.cognomeGiocatore = cognomeGiocatore;
@@ -164,11 +164,11 @@ public class CartaGiocatore {
         this.abilita = abilita;
     }
 
-    public File getFotoCarta() {
+    public byte[] getFotoCarta() {
         return fotoCarta;
     }
 
-    public void setFotoCarta(File fotoCarta) {
+    public void setFotoCarta(byte[] fotoCarta) {
         this.fotoCarta = fotoCarta;
     }
 }

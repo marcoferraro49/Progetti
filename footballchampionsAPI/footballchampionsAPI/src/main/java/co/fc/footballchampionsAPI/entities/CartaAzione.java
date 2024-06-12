@@ -15,16 +15,18 @@ public class CartaAzione {
     private String descrizioneCarta;
     private String annata;
     private FrecciaCartaAzione [] frecce = new FrecciaCartaAzione[8];
+    private byte[] fotoCarta;
 
     public CartaAzione() {
     }
 
-    public CartaAzione(Long id, String nomeCarta, String descrizioneCarta, String annata, FrecciaCartaAzione[] frecce) {
+    public CartaAzione(Long id, String nomeCarta, String descrizioneCarta, String annata, FrecciaCartaAzione[] frecce, byte[] fotoCarta) {
         this.id = id;
         this.nomeCarta = nomeCarta;
         this.descrizioneCarta = descrizioneCarta;
         this.annata = annata;
         this.frecce = frecce;
+        this.fotoCarta = fotoCarta;
     }
 
     public Long getId() {
@@ -33,6 +35,14 @@ public class CartaAzione {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public byte[] getFotoCarta() {
+        return fotoCarta;
+    }
+
+    public void setFotoCarta(byte[] fotoCarta) {
+        this.fotoCarta = fotoCarta;
     }
 
     public String getNomeCarta() {
