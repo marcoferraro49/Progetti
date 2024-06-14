@@ -12,5 +12,7 @@ public class CartaAzioneController {
     @Autowired
     CartaAzioneService cartaAzioneService;
 
-
+    //post
+    //get per nome
+    //delete singola
 }

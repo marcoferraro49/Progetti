@@ -12,15 +12,18 @@ public class Deck {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String fotoDeck;
+
     @OneToMany
     private List<CartaGiocatore> listaCarte;
 
     public Deck() {
     }
 
-    public Deck(Long id, List<CartaGiocatore> listaCarte) {
+    public Deck(Long id, List<CartaGiocatore> listaCarte, String fotoDeck) {
         this.id = id;
         this.listaCarte = listaCarte;
+        this.fotoDeck = fotoDeck;
     }
 
     public Long getId() {
@@ -37,5 +40,13 @@ public class Deck {
 
     public void setListaCarte(List<CartaGiocatore> listaCarte) {
         this.listaCarte = listaCarte;
+    }
+
+    public String getFotoDeck() {
+        return fotoDeck;
+    }
+
+    public void setFotoDeck(String fotoDeck) {
+        this.fotoDeck = fotoDeck;
     }
 }

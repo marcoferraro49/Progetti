@@ -15,12 +15,12 @@ public class CartaAzione {
     private String descrizioneCarta;
     private String annata;
     private FrecciaCartaAzione [] frecce = new FrecciaCartaAzione[8];
-    private byte[] fotoCarta;
+    private String fotoCarta;
 
     public CartaAzione() {
     }
 
-    public CartaAzione(Long id, String nomeCarta, String descrizioneCarta, String annata, FrecciaCartaAzione[] frecce, byte[] fotoCarta) {
+    public CartaAzione(Long id, String nomeCarta, String descrizioneCarta, String annata, FrecciaCartaAzione[] frecce, String fotoCarta) {
         this.id = id;
         this.nomeCarta = nomeCarta;
         this.descrizioneCarta = descrizioneCarta;
@@ -37,11 +37,11 @@ public class CartaAzione {
         this.id = id;
     }
 
-    public byte[] getFotoCarta() {
+    public String getFotoCarta() {
         return fotoCarta;
     }
 
-    public void setFotoCarta(byte[] fotoCarta) {
+    public void setFotoCarta(String fotoCarta) {
         this.fotoCarta = fotoCarta;
     }
 
