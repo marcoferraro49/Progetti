@@ -30,9 +30,16 @@ public class CartaGiocatoreService {
     }
 
     public List<CartaGiocatore> trovaGiocatorePerPunteggioMinoreDi(int punteggioCarta){
-        return giocatoreRepository.findByPunteggioCartaLessThan(50);
+        return giocatoreRepository.findByPunteggioCartaLessThanEqual(punteggioCarta);
     }
 
-    //cerca per punteggio abilità minore o maggiore di un tot
-    //cerca per abilità
+    public List<CartaGiocatore> trovaGiocatorePerPunteggioMaggioreDi(int punteggioCarta) {
+        return giocatoreRepository.findByPunteggioCartaGreaterThanEqual(punteggioCarta);
+    }
+
+    public List<CartaGiocatore> trovaGiocatoreTraDuePunteggi(int puntiInf, int puntiSup) {
+        return giocatoreRepository.findByPunteggioCartaBetween(puntiInf, puntiSup);
+    }
+
+
 }

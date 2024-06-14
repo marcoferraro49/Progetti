@@ -10,5 +10,7 @@ import java.util.List;
 public interface CartaGiocatoreRepository extends JpaRepository<CartaGiocatore, Long> {
 
     List<CartaGiocatore> findByCognomeGiocatore(String cognome);
-    List<CartaGiocatore> findByPunteggioCartaLessThan(int punteggioCarta);
+    List<CartaGiocatore> findByPunteggioCartaLessThanEqual(int punteggioCarta);
+    List<CartaGiocatore> findByPunteggioCartaGreaterThanEqual(int punteggioCarta);
+    List<CartaGiocatore> findByPunteggioCartaBetween(int puntiInf, int puntiSup);
 }
